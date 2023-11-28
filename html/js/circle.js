@@ -134,7 +134,7 @@ function startGame(time){
     let u = "fail";
         if(status)
             u = "success";
-    xhr.open("POST", `https://k-ui/circle-${u}`, true);
+    xhr.open("POST", `https://${GetParentResourceName()}/circle-${u}`, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({}));
     streak = 0;

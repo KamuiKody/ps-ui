@@ -47,13 +47,13 @@ document.addEventListener("keydown", function(ev) {
 });
 
 function MenuClose() {
-    $.post('https://k-ui/menuClose', JSON.stringify({"ok":true}));
+    $.post(`https://${GetParentResourceName()}/menuClose`, JSON.stringify({"ok":true}));
     $(".item").remove();
     Open = false
 }
 
 function MenuSelect(id) {
     let newId = (id + 1)
-    $.post(`https://k-ui/MenuSelect`, JSON.stringify({"data":newId, "ok":true}));
+    $.post(`https://${GetParentResourceName()}/MenuSelect`, JSON.stringify({"data":newId, "ok":true}));
     MenuClose();
 }

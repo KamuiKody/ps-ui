@@ -28,13 +28,13 @@ $(function () {
 
     document.onkeyup = function (data) {
         if (data.which == 27) {
-            $.post(`https://k-ui/showItemImage-callback`, JSON.stringify({}));
+            $.post(`https://${GetParentResourceName()}/showItemImage-callback`, JSON.stringify({}));
             return
         }
     };
 
     $("#showImageClose").click(function () {
-        $.post(`https://k-ui/showItemImage-callback`, JSON.stringify({}));
+        $.post(`https://${GetParentResourceName()}/showItemImage-callback`, JSON.stringify({}));
         return
     })
 })

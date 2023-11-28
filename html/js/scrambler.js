@@ -77,14 +77,14 @@ function CheckScrambler() {
     current_attempt %= 80;
 
     if(scrambler_started && current_attempt === correct_pos){
-        $.post(`https://${GetParentResourceName()}/scrambler-callback`, JSON.stringify({ 'success': true }));
+        $.post(`https://${${GetParentResourceName()}}/scrambler-callback`, JSON.stringify({ 'success': true }));
         setTimeout(function() { $(".scrambler").fadeOut() }, 500);
         resetScrambler();
     }else{
         resetScrambler(false);
         current_pos = correct_pos-codes_pos;
         drawPosition('green', false);
-        $.post(`https://${GetParentResourceName()}/scrambler-callback`, JSON.stringify({ 'success': false }));
+        $.post(`https://${${GetParentResourceName()}}/scrambler-callback`, JSON.stringify({ 'success': false }));
         setTimeout(function() { $(".scrambler").fadeOut() }, 500);
     }
 }
