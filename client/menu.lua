@@ -1,5 +1,4 @@
 local buttons = {}
-Callbackk = nil
 
 local function CreateMenu(MenuData)
     buttons = MenuData

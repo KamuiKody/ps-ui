@@ -1,4 +1,5 @@
 local open = false
+Callbackk = nil
 
 RegisterNUICallback('scrambler-callback', function(data, cb)
 	SetNuiFocus(false, false)
